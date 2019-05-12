@@ -2,3 +2,9 @@ knife bootstrap windows winrm ADDRESS --winrm-user USER --winrm-password 'PASSWO
 
 #exiting node bootstrap with node name
 knife winrm 'name:node1-windows' chef-client --winrm-user USER --winrm-password 'PASSWORD' --attribute ipaddress
+
+#tagging run-list
+knife node run_list set test-node 'recipe[iptables]'
+
+OR
+knife node run_list set test-node 'recipe[iptables::default]' -> recipe
