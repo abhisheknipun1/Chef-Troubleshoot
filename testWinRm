@@ -1,0 +1,1 @@
+knife wsman test HOSTNAME --manual-list
